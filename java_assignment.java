@@ -36,7 +36,7 @@ public class JavaAssignment
            {
                System.out.println("Hello " + nameString + ", you got a B");
            }
-           else if (gradeInt >= 90 && gradeInt == 100)
+           else if (gradeInt >= 90 && gradeInt <= 100)
            {
                System.out.println("Hello " + nameString + ", you got an A");
            }
