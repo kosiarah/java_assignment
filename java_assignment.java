@@ -6,16 +6,26 @@ public class JavaAssignment
 {
     public static void main(String[] args)
     {
-        Scanner grade = new Scanner(System.in);
-        System.out.print("Enter your grade: ");
-        int gradeInt = grade.nextInt();
 
        Scanner name = new Scanner(System.in);
        System.out.print("Enter your name: ");
        String nameString = name.nextLine();
 
+       Scanner end = new Scanner(System.in);
+
        while (true)
        {
+           Scanner grade = new Scanner(System.in);
+           System.out.print("Enter your grade (Or Type 'E' to exit): ");
+           String gradeInput = end.nextLine();
+
+           if (gradeInput.equalsIgnoreCase("E"))
+           {
+               break;
+           }
+
+           int gradeInt = Integer.parseInt(gradeInput);
+
            if (gradeInt > 0 && gradeInt < 50)
            {
                System.out.println("Sorry " + nameString + ", you failed");
